@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    h1, h2 {
+      margin: 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #333;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a:hover {
+      color: #ff5722;
+    }
+
+    /* Home Section */
+    .home {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      height: 600px;
+    }
+    .home img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-top: 15px;
+    }
+    .home h1 {
+      font-size: 2.5rem;
+     color: black;
+    }
+    .home p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: black;
+    }
+    
+    
+    /* About Section */
+    .about {
+      padding: 3rem 1rem;
+      background-color: #ffffff;
+      text-align: center;
+      height: 600px;
+    }
+    .about h2 {
+      color: #4caf50;
+     margin-top: 200px;
+    }
+    .about p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #666;
+    }
+
+    /* Education Section */
+    .name{
+      margin-top: 50px;
+    }
+    .education1{
+  width: 100%;
+  height: 700px;
+}
+.edu {
+  color: black;
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.timeline1 {
+  position: relative;
+  margin: 50px auto;
+  max-width: 900px;
+}
+
+.timeline1::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: #e0e0e0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item1 {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+.timeline-item1:nth-child(odd) {
+  justify-content: flex-start;
+}
+
+.timeline-item-content1 {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 45%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.timeline-item-content1::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border: 3px solid #007bff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item1:nth-child(odd) .timeline-item-content1::after {
+  left: -10px;
+}
+
+.timeline-item1:nth-child(even) .timeline-item-content1::after {
+  right: -10px;
+}
+
+.timeline-item1 h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #007bff;
+}
+
+.timeline-item1 p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.timeline-item1 span {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #555;
+}
+
+    /* Skills Section */
+    .skills {
+      padding: 3rem 1rem;
+      background-color:  #333;
+      text-align: center;
+      height: 600px;
+    }
+    .skills h2 {
+      color: #4caf50;
+      margin-bottom: 2rem;
+      margin-top: 150px;
+    }
+    .skill-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .skill {
+      background-color: #f4f4f4;
+      padding: 1rem 2rem;
+      margin: 0.5rem;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .skill:hover{
+      background-color: #1097b9;
+      color: white;
+    }
+
+    /* Projects Section */
+    .projects {
+      padding: 3rem 1rem;
+      background-color: #f3f3f3;
+      height: 600px;
+    }
+    .projects h2 {
+      text-align: center;
+      color: #4caf50;
+      margin-top: 15px;
+    }
+    .projects .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    .project {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-10px);
+    }
+    .project img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .project h3 {
+      margin: 1rem 0;
+      margin-top: 15px;
+      color: #333;
+    }
+    .project a {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #4caf50;
+      padding: 0.8rem 1.2rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .project a:hover {
+      background-color: #388e3c;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #333;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .home h1 {
+        font-size: 2rem;
+      }
+      .projects .project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <img src=".\snehal.avif" alt="Your Photo">
+    <h1>Hi, I'm Snehal Wable</h1>
+    <p>A Passionate Web Developer</p>
+   
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hi! I'm Snehal Wable, a web developer with a passion for creating beautiful and functional websites. I have experience in HTML, CSS, JavaScript, and React. I am always eager to learn new technologies and take on challenging projects. When I'm not coding, I enjoy photography and hiking.</p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <div id="education">
+    <div class="edu">
+      <p class="name">Education</p>
+    </div>
+
+    <div class="education1">
+      <div class="timeline1">
+        <!-- Item 1 -->
+        <div class="timeline-item1">
+          <div class="timeline-item-content1">
+            <h3>Bachelor of Engineering (BE)</h3>
+            <p>Electronics and telecommunications engineering (E&TC)</p>
+            <hr />
+            <p>
+              Nutan Maharashtra Institute of Engineering and Technology(NMIET)
+            </p>
+            <hr />
+            <span>CGPA: 8.77(SE) </span>
+            <hr />
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline-item1">
+          <div class="timeline-item-content1">
+            <h3>12th (HSC)</h3>
+
+            <p>Hutatma Rajguru Mahavidyalaya, Rajgurunagar(HRM)</p>
+            <hr />
+          
+            <span>Percentage: 86.80%</span>
+            <hr />
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="timeline-item1">
+          <div class="timeline-item-content1">
+            <h3>10th (SSC)</h3>
+            <p>Nutan Vidyalaya Retwadi, Retwadi(NVR)</p>
+            <hr />
+           
+            <span>Percentage: 65.67%</span>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skill-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Git</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="project-grid">
+        <div class="project">
+          <img src=".\project.png" alt="Project 1">
+          <h3>Project 1</h3>
+          <p>Designed and developed Amazon clone to showcase my individual skills, projects.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div class="project">
+          <img src=".\project 2.png" alt="Project 2">
+          <h3>Project 2</h3>
+          <p>Designed and developed isoliments clone to showcase my individual skills, projects.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div class="project">
+          <img src=".\project 3.png" alt="Project 3">
+          <h3>Project 3</h3>
+          <p>Designed and developed Personal Portfolio to showcase my individual skills, projects.</p>
+          <a href="#">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Snehal Wable. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
